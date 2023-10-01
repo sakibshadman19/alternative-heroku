@@ -1,10 +1,15 @@
 const express = require('express')
 const mongoose = require('mongoose')
 const Product = require('./models/productModel')
+var cors = require('cors')
+
+
 const app = express()
 
 app.use(express.json())
+
 app.use(express.urlencoded({extended: false}))
+app.use(cors()) 
 
 //routes
 
