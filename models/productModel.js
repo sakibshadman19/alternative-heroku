@@ -12,7 +12,9 @@ const productSchema = mongoose.Schema(
         },
         reviews: {
             type: Number,
-            default: 0
+            default: 0,
+            min: 0,
+            max: 5
         },
         price: {
             type: Number,
